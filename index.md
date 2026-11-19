@@ -4,7 +4,7 @@ title: Meada Privacy Policy
 
 # Meada Privacy Policy
 
-Effective date: 2026-11-18 · Version 1.1
+Effective date: 2026-11-18 · Version 1.2
 
 Meada is an Android app that files your conversation transcripts into topic folders in **your own Google Drive**, builds a knowledge graph of them in that same Drive, and answers your questions using the AI provider **you** choose. This policy explains what data Meada touches, where it goes, and your rights. It is written to meet the EU General Data Protection Regulation (GDPR, in particular Articles 12–22), Brazil's Lei Geral de Proteção de Dados (LGPD, in particular Articles 9 and 18), and the Google API Services User Data Policy, including its Limited Use requirements.
 
@@ -25,6 +25,7 @@ Because nothing reaches us, we hold no copy of your content and cannot read, rec
 | `.md`, `.txt` and audio files you share with Meada or pick in the app | Other apps on your phone, at your request | To file them |
 | Your AI provider API keys | You type them | To call the provider you chose |
 | App settings, spending records, the queue of files waiting to be filed | Created on your phone | To run the app |
+| Your Ask history: questions, answers and the sources they cited | Created on your phone when you ask | So you can read an answer again without asking (and paying) twice; delete one, or all with **Clear history** |
 
 Meada does **not** access your contacts, location, camera, microphone, call logs or any Drive files outside the folder you chose for its normal work. Meada requests Google's `drive.file` permission: it can see only the folders and files Meada itself creates, never the rest of your Drive.
 
@@ -62,7 +63,7 @@ Meada does not use your data for any other purpose, does not make automated deci
 
 ## 7. Retention and deletion
 
-- **On your phone:** data is kept until you delete it. Settings → **Disconnect & delete local data** revokes Meada's Google access and deletes everything Meada keeps on the phone (API keys and their Keystore key, settings, spend records, the queue and cached files). Uninstalling the app or clearing its storage in Android settings has the same local effect.
+- **On your phone:** data is kept until you delete it. Settings → **Disconnect & delete local data** revokes Meada's Google access and deletes everything Meada keeps on the phone (API keys and their Keystore key, settings, spend records, the Ask history, the queue and cached files). Uninstalling the app or clearing its storage in Android settings has the same local effect.
 - **In your Google Drive:** your files stay there until **you** delete them; Meada never deletes them on disconnect. Delete the Meada folder in Google Drive to remove them. Undo and merge actions move files to Drive's trash, which Google empties after 30 days or when you empty it.
 - **Google access:** revoke it in the app (above) or at any time at [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
 - **At your AI provider:** retention of API inputs is set by your provider; see its API data policy and your account settings there.
