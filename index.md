@@ -4,7 +4,7 @@ title: Meada Privacy Policy
 
 # Meada Privacy Policy
 
-Effective date: 2026-11-18 · Version 1.2
+Effective date: 2026-11-19 · Version 1.3
 
 Meada is an Android app that files your conversation transcripts into topic folders in **your own Google Drive**, builds a knowledge graph of them in that same Drive, and answers your questions using the AI provider **you** choose. This policy explains what data Meada touches, where it goes, and your rights. It is written to meet the EU General Data Protection Regulation (GDPR, in particular Articles 12–22), Brazil's Lei Geral de Proteção de Dados (LGPD, in particular Articles 9 and 18), and the Google API Services User Data Policy, including its Limited Use requirements.
 
@@ -22,7 +22,7 @@ Because nothing reaches us, we hold no copy of your content and cannot read, rec
 |---|---|---|
 | Files and folders inside the Google Drive folder you choose (transcripts, topic folders, `README.md` summaries, `graphify-out/graph.json`) | Your Google Drive, with the Drive permission you grant | To list topics, file new transcripts, show, move and merge files, and build the graph |
 | Your Google account email address | Google Drive (`about` endpoint) | Shown on screen so you know which account is connected |
-| `.md`, `.txt` and audio files you share with Meada or pick in the app | Other apps on your phone, at your request | To file them |
+| `.md`, `.txt`, Word (`.docx`) and audio files you share with Meada or pick in the app | Other apps on your phone, at your request | To file them. Word files are converted to text on your phone; the original is kept in your Drive |
 | Your AI provider API keys | You type them | To call the provider you chose |
 | App settings, spending records, the queue of files waiting to be filed | Created on your phone | To run the app |
 | Your Ask history: questions, answers and the sources they cited | Created on your phone when you ask | So you can read an answer again without asking (and paying) twice; delete one, or all with **Clear history** |
