@@ -4,14 +4,15 @@ title: Meada Privacy Policy
 
 # Meada Privacy Policy
 
-Effective date: 2026-11-19 · Version 1.3
+Effective date: 2026-11-24 · Version 1.5
 
-Meada is an Android app that files your conversation transcripts into topic folders in **your own Google Drive**, builds a knowledge graph of them in that same Drive, and answers your questions using the AI provider **you** choose. This policy explains what data Meada touches, where it goes, and your rights. It is written to meet the EU General Data Protection Regulation (GDPR, in particular Articles 12–22), Brazil's Lei Geral de Proteção de Dados (LGPD, in particular Articles 9 and 18), and the Google API Services User Data Policy, including its Limited Use requirements.
+Meada is an Android app that files your conversation transcripts into topic folders in **your own Google Drive**, builds a knowledge graph of them in that same Drive, and answers your questions using the AI **you** choose: a model that runs on your phone, or an AI provider. This policy explains what data Meada touches, where it goes, and your rights. It is written to meet the EU General Data Protection Regulation (GDPR, in particular Articles 12–22), Brazil's Lei Geral de Proteção de Dados (LGPD, in particular Articles 9 and 18), and the Google API Services User Data Policy, including its Limited Use requirements.
 
 ## 1. Who is responsible
 
-- **Publisher of the app ("we"):** Cadisa Systems, contact: support@cadisa.systems. We publish the software. **We do not operate servers that receive, store or process your content.** Meada has no developer back end, no analytics, no advertising and no crash reporting service.
+- **Publisher of the app ("we"):** Cadisa Ltd ([cadisa.systems](https://cadisa.systems)), contact: support@cadisa.systems. We publish the software. **We do not operate servers that receive, store or process your content.** Meada has no developer back end, no analytics, no advertising and no crash reporting service.
 - **Your Google Drive data:** you control it. Meada reads and writes it on your phone, with the access you grant, on your behalf.
+- **The model on your phone** (Gemma 4 E2B, if you choose "This phone"): runs entirely on your device. Text and audio it processes never leave the phone; no AI provider receives them.
 - **Your AI provider** (Anthropic, OpenAI or Google Gemini — the one you configure): processes the text and audio Meada sends on your behalf under **your own account and API key**, under that provider's terms and privacy policy. In GDPR terms, the provider acts for you under your contract with it; Meada only routes your request from your phone.
 
 Because nothing reaches us, we hold no copy of your content and cannot read, recover or hand it over.
@@ -25,7 +26,9 @@ Because nothing reaches us, we hold no copy of your content and cannot read, rec
 | `.md`, `.txt`, Word (`.docx`) and audio files you share with Meada or pick in the app | Other apps on your phone, at your request | To file them. Word files are converted to text on your phone; the original is kept in your Drive |
 | Your AI provider API keys | You type them | To call the provider you chose |
 | App settings, spending records, the queue of files waiting to be filed | Created on your phone | To run the app |
+| Copies of files from your Meada folder that the app has opened or written | Your Google Drive | So a file is downloaded once, not every time you open it. A copy is used only while it matches the file in Drive, and the oldest copies are removed when they pass 100 MB |
 | Your Ask history: questions, answers and the sources they cited | Created on your phone when you ask | So you can read an answer again without asking (and paying) twice; delete one, or all with **Clear history** |
+| A search-by-meaning index: for each conversation in your Meada folder, its file name, topic, the first words of each passage and a list of numbers describing its meaning | Created on your phone from your Drive files, only if you download the search model | So Ask also finds conversations that say the same thing in other words or in another language. It is kept with the app's cached files and never leaves the phone |
 
 Meada does **not** access your contacts, location, camera, microphone, call logs or any Drive files outside the folder you chose for its normal work. Meada requests Google's `drive.file` permission: it can see only the folders and files Meada itself creates, never the rest of your Drive.
 
@@ -33,7 +36,9 @@ Meada does **not** access your contacts, location, camera, microphone, call logs
 
 - **Your Google Drive:** your transcripts, filed segments, summaries and the knowledge graph are stored there, in your account, under Google's terms. You can open, download or delete them at any time.
 - **Your chosen AI provider:** the text of a transcript you file (and, for audio, the audio file) is sent over HTTPS to the provider configured for "Organize". The questions you ask, with the matching segments from your Drive, are sent to the provider configured for "Answer". The app shows which provider will receive data on the AI connections screen before you save it. Nothing is sent to any other party.
-- **Nowhere else.** All network traffic is HTTPS to Google (Drive and sign-in) and to the AI provider you configured.
+- **On your phone instead:** a connection set to "This phone" sends nothing to any provider; the transcript, the audio, your questions and the segments read from Drive are processed on the device. To get the model, the app downloads one file (about 2.6 GB) from Hugging Face over HTTPS, once; the download carries no content of yours, and the file is checked against a fixed SHA-256 before use.
+- **Search by meaning, on your phone:** if you choose to, the app downloads a small search model (EmbeddingGemma 2, about 165 MB) from Hugging Face the same way: once, over HTTPS, with no content of yours, checked against a fixed SHA-256. It runs only on the phone; nothing it reads is sent anywhere.
+- **Nowhere else.** All network traffic is HTTPS to Google (Drive and sign-in), to the AI provider you configured and, only to download the phone's models, to Hugging Face.
 
 ## 4. How data is protected on your phone
 
@@ -63,7 +68,7 @@ Meada does not use your data for any other purpose, does not make automated deci
 
 ## 7. Retention and deletion
 
-- **On your phone:** data is kept until you delete it. Settings → **Disconnect & delete local data** revokes Meada's Google access and deletes everything Meada keeps on the phone (API keys and their Keystore key, settings, spend records, the Ask history, the queue and cached files). Uninstalling the app or clearing its storage in Android settings has the same local effect.
+- **On your phone:** data is kept until you delete it. Settings → **Disconnect & delete local data** revokes Meada's Google access and deletes everything Meada keeps on the phone (API keys and their Keystore key, settings, spend records, the Ask history, the queue and cached files, including the copies of Drive files and the search-by-meaning index). Uninstalling the app or clearing its storage in Android settings has the same local effect.
 - **In your Google Drive:** your files stay there until **you** delete them; Meada never deletes them on disconnect. Delete the Meada folder in Google Drive to remove them. Undo and merge actions move files to Drive's trash, which Google empties after 30 days or when you empty it.
 - **Google access:** revoke it in the app (above) or at any time at [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
 - **At your AI provider:** retention of API inputs is set by your provider; see its API data policy and your account settings there.
@@ -99,4 +104,4 @@ We will update this policy when Meada's data handling changes, with a new effect
 
 ## 12. Contact
 
-Cadisa Systems · support@cadisa.systems · For LGPD: data protection officer (encarregado): leonardo.fernandes@cadisa.systems.
+Cadisa Ltd · [cadisa.systems](https://cadisa.systems) · support@cadisa.systems · For LGPD: data protection officer (encarregado): leonardo.fernandes@cadisa.systems.
